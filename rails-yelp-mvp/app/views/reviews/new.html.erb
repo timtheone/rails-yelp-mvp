@@ -1,0 +1,17 @@
+<h2 class="text-center">Leave your review here.</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <%= simple_form_for [@restaurant, @review] do |f| %>
+        <%= f.input :content %>
+        <div class="row">
+          <div class="col-xs-2">
+            <%= f.input :rating %>
+          </div>
+        </div>
+        <%= f.button :submit, class:'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
